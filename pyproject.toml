@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "personality_trip_recommender"
+version = "0.1.0"
+description = "An agentic app that recommends trips based on personality traits."
+authors = ["Your Name <youremail@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+crewai = "^0.152.0"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
