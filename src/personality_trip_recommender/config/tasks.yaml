@@ -1,0 +1,16 @@
+analyze_personality:
+  description: "Analyze the provided personality traits: {personality_traits}"
+  expected_output: "A set of preferences and interests derived from the personality traits."
+  agent: user_profiler
+
+search_destinations:
+  description: "Use derived preferences to search for suitable travel destinations."
+  expected_output: "A list of recommended destinations that match the user's preferences."
+  agent: trip_researcher
+  context: [analyze_personality]
+
+generate_report:
+  description: "Generate a markdown report with the recommended trips and justifications."
+  expected_output: "A markdown formatted document listing the recommended trips and their relevance to the user's personality."
+  agent: report_writer
+  context: [search_destinations]
